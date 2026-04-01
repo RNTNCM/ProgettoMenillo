@@ -40,3 +40,8 @@ values ( 1,'2026-05-01', '2026-05-21', '09:00 - 13:00', 'Torino', 50, 34),
 ( 2,'2026-06-01', '2026-05-19', '14:00 - 18:00', 'Alessandria', 50, 44),
 ( 5,'2026-06-08', '2026-06-19', '09:00 - 12:00', 'Chieri', 60, 24),
 ( 5,'2026-06-08', '2026-06-19', '14:00 - 17:00', 'Chieri', 50, 39);
+
+create user 'admin'@'localhost' identified by 'admin';
+grant select on corsi_aziendali.* to 'admin'@'localhost';
+
+flush privileges;
